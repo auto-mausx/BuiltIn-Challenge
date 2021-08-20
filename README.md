@@ -36,7 +36,7 @@
 
   - Essentially, what this does is point the github workflow to the IAM role, ECS cluster, and ECR repo that was created by terraform in order to run the workflow and apply the new application revision
 
-    - *Note: You must tag each new revision before pushing to github, as well as remember to push with the --tag flag in order for the deployment to trigger*
+    - *Note: You must tag each new revision before pushing to github, as well as remember to push with the `--tag` flag in order for the deployment to trigger*
 
 - Make a revision to the code in `app.py` and push your newly tagged revision to github
 
