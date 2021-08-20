@@ -1,7 +1,7 @@
 container = {
-  image = "particule/helloworld"
+  image = "tutum/hello-world"
 }
 
 vpc = {
-  id = "vpc-ef26d387"
+  id = "vpc-9b19c1f0"
 }
