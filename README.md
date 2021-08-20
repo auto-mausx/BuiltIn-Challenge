@@ -34,7 +34,7 @@
     $ gh secret set ECS_SERVICE -b $(terraform output -raw ecs_service)
   ```
 
-  - Essentially, what this does is point the github workflow to the IAM role and ECS cluster that was created by terraform in order to run the workflow and apply the new application revision
+  - Essentially, what this does is point the github workflow to the IAM role, ECS cluster, and ECR repo that was created by terraform in order to run the workflow and apply the new application revision
 
     - *Note: You must tag each new revision before pushing to github, as well as remember to push with the --tag flag in order for the deployment to trigger*
 
