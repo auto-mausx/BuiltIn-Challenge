@@ -18,7 +18,7 @@
 
 - After the plan has been sucessfully built, run `terraform apply` to build the resources
 
-- After the resources have been sucessfully built, you need to manually configure the github workflow secrets by running the following commands:
+- After the resources have been sucessfully built, you need to manually configure the github workflow secrets by running the following commands with [github CLI](https://github.com/cli/cli):
 
   ```BASH
     $ gh secret set AWS_ACCESS_KEY_ID -b $(terraform output -raw publisher_access_key)
@@ -36,10 +36,10 @@
 
   - Essentially, what this does is point the github workflow to the IAM role and ECS cluster that was created by terraform in order to run the workflow and apply the new application revision
 
-    *Note: You must tag each new revision before pushing to github, as well as remember to push with the --tag flag in order for the deployment to trigger*
+    - *Note: You must tag each new revision before pushing to github, as well as remember to push with the --tag flag in order for the deployment to trigger*
 
-  - Make a revision to the code in `app.py` and push your newly tagged revision to github
+- Make a revision to the code in `app.py` and push your newly tagged revision to github
 
-  - If you visit the URL provided by the terraform output, both before and after the tagged push to github, the app should change to the python simple app.
+- If you visit the URL provided by the terraform output, both before and after the tagged push to github, the app should change to the python simple app.
 
-  - You can view the entire workflow if you go to the actions tab under your cloned repository
+- You can view the entire workflow if you go to the actions tab under your cloned repository
